@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Editor</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <h1>
+        <svg width="500" height="60" viewBox="0 0 500 60">
+            <text x="0" y="50" font-size="48" font-family="Arial">SVG Shape Editor</text>
+        </svg>
+    </h1>
+    <div id="obshdiv">
+        <div id="notificationContainer"></div>
+        <div id="editor">
+            <svg id="svgCanvas" xmlns="http://www.w3.org/2000/svg"> </svg>
+            <div id ="razmer"> 
+            </div>
+        </div>
+        <div id="controls">
+            <button id="startfigure">Начать создание полигона</button>
+            <button id="ohistka">Очистить всё</button>
+            <button id="deletelasttochku">Удалить последнюю точку</button>
+            <button id="deletelastpolygon">Удалить последний созданный полигон</button>
+            <button id="redactorpolygonn">Редактировать полигоны</button>
+        </div>
+        <div id ="setting"> 
+            <label>Выбор цвета заливки (Fill): 
+                <input type="color" id="fillColor" value="#ffffff">
+            </label>
+            <label>Выбор цвета обводки (Stroke): 
+                <input type="color" id="strokeColor" value="#000000">
+            </label>
+            <label>Ширина обводки (Stroke Width): 
+                <input type="number" id="strokeWidth" min="1" max="10" value="2">
+            </label>
+
+        </div>
+        <textarea id="svgCode"></textarea>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
